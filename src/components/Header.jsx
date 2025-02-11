@@ -8,7 +8,8 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Header = () => {
-  const { setProducts } = useContext(AppContext);
+  const { setProducts, cartItems, setIsCartVisible, isCartVisible } =
+    useContext(AppContext);
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -42,12 +43,17 @@ const Header = () => {
         </button>
       </form>
 
-      <div className=" relative cursor-pointer ml-9">
+      <button
+        onClick={() => setIsCartVisible(!isCartVisible)}
+        className=" relative cursor-pointer ml-9 "
+      >
         <IoCartOutline className="text-3xl" />
-        <span className="absolute top-0 left-0 bg-red-500 text-white rounded-full w-3 h-3 flex items-center justify-center p-2 text-xs">
-          1
-        </span>
-      </div>
+        {cartItems.length > 0 && (
+          <span className="absolute top-0 left-0 bg-red-500 text-white rounded-full w-3 h-3 flex items-center justify-center p-2 text-xs">
+            {cartItems.length}
+          </span>
+        )}
+      </button>
     </div>
   );
 };
