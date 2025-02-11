@@ -1,8 +1,19 @@
-# React + Vite
+# Shopping Cart with ReactJS 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a shopping cart application built to practice my skills with **ReactJS**. It utilizes the **Context API** to manage the global state, **React hooks** for handling state and effects, and consumes the **Mercado Livre API** to display available products. The project also incorporates **TailwindCSS** for styling.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display a list of products fetched from the **Mercado Livre API**.
+- Add and remove products from the cart.
+- Dynamic updating of cart total and item count.
+- Fully responsive design using **TailwindCSS**.
+
+## 🛠 Technologies Used
+
+- **ReactJS** for building the user interface.
+- **Context API** for global state management.
+- **Hooks** (useState, useEffect, useContext) for managing application state.
+- **Mercado Livre API** to fetch product data.
+- **TailwindCSS** for responsive and modern styling.
+
